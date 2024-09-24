@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8676871337529497394}
   - component: {fileID: 3692409425540792534}
   - component: {fileID: 390770701042090809}
+  - component: {fileID: -289466328771597197}
   m_Layer: 0
   m_Name: tower bullet
   m_TagString: Enemy
@@ -148,3 +149,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-289466328771597197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919636113377284647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8beee6ea212aab749a5247f1ec91c8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

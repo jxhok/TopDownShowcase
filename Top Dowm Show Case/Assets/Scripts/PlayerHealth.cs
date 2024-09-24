@@ -42,12 +42,7 @@ public class PlayerHealth : MonoBehaviour
                 //SceneManager.LoadScene("Win");
 
             }
-        }  
-         if (collision.gameObject.tag == "Chest")
-        {
-            SceneManager.LoadScene("Win");
-        }
-
+        } 
        }
     private void OnCollisionStay2D(Collision2D collision) 
     {

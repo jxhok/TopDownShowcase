@@ -36,6 +36,7 @@ public class PlayerShoot : MonoBehaviour
             //spawn in the bullet
             GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = mousePos * shootSpeed;
+            bullet.transform.right = mousePos;
             Destroy(bullet, bulletLifetime);
             //Debug.Log(mousePos);
         }
