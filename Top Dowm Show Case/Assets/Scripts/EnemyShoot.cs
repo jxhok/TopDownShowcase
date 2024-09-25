@@ -26,7 +26,7 @@ public class EnemyShoot : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-            Vector2 shootDir = player.transform.position - transform.position;
+        Vector3 shootDir = player.transform.position - transform.position + (Vector3)player.GetComponent<Rigidbody2D>().velocity;
         if (timer > shootDelay && shootDir.magnitude <= shootRange)
         {
             timer = 0;

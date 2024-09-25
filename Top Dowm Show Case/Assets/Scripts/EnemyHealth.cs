@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "PlayerBullet") 
         {
             health -= 1;
-            healthBar.fillAmount = health / maxHealth;
+            //healthBar.fillAmount = health / maxHealth;
             if (health < 0)
             {
                 Destroy(gameObject);

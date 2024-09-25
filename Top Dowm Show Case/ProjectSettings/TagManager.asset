@@ -8,6 +8,8 @@ TagManager:
   - PlayerBullet
   - chest
   - chestCanvas
+  - Tower
+  - FailCanvas
   layers:
   - Default
   - TransparentFX

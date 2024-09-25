@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4734014526712971538}
   m_Layer: 0
   m_Name: New Prefab 1
-  m_TagString: Enemy
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,10 +145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8919636113377284647, guid: 96d0ed10b1cb9e148ac5cad02098b8ea, type: 3}
-  shootSpeed: 10
+  shootSpeed: 9
   bulletLifetime: 2
   shootDelay: 0.4
-  shootRange: 15
+  shootRange: 20
 --- !u!114 &4734014526712971538
 MonoBehaviour:
   m_ObjectHideFlags: 0
