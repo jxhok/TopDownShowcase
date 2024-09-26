@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
         TimeBar.fillAmount = timer / waitTime;
         if (timer > waitTime )
         {
-            if (Time.timeScale == 1)
+            if (Time.timeScale == 1 && !FailCanvas.GetComponent<Canvas>().enabled)
             {
                 Time.timeScale = 0;
                 FailCanvas.GetComponent<Canvas>().enabled = true;

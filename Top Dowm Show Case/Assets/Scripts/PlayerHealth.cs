@@ -13,6 +13,12 @@ public class PlayerHealth : MonoBehaviour
     float maxHealth;
     [SerializeField]
     Image healthBar;
+    [SerializeField]
+    GameObject FailCanvas;
+    [SerializeField]
+    float healthTick = 1;
+    [SerializeField]
+    float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +44,8 @@ public class PlayerHealth : MonoBehaviour
             //health--;
             if (health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Time.timeScale = 0;
+                FailCanvas.GetComponent<Canvas>().enabled = true;
                 //SceneManager.LoadScene("Win");
 
             }
@@ -46,13 +53,16 @@ public class PlayerHealth : MonoBehaviour
        }
     private void OnCollisionStay2D(Collision2D collision) 
     {
-        if (collision.gameObject.tag == "Enemy")
-        {  
+        timer += Time.deltaTime;
+        if (collision.gameObject.tag == "Enemy" && timer > healthTick)
+        {
+            timer = 0;
             health -= 1;
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Time.timeScale = 0;
+                FailCanvas.GetComponent<Canvas>().enabled = true;
                 //SceneManager.LoadScene("Win");
 
             }
@@ -66,7 +76,8 @@ public class PlayerHealth : MonoBehaviour
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Time.timeScale = 0;
+                FailCanvas.GetComponent<Canvas>().enabled = true;
                 //SceneManager.LoadScene("Win");
 
             }
