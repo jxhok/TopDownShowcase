@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 696602637, guid: 4c84740992d3fec48ae58f46ae71de32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -197,6 +197,9 @@ MonoBehaviour:
   health: 10
   levelToLoad: 
   healthBar: {fileID: 0}
+  FailCanvas: {fileID: 0}
+  healthTick: 1
+  timer: 0
 --- !u!61 &8549046035762848969
 BoxCollider2D:
   m_ObjectHideFlags: 0

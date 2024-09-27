@@ -40,4 +40,9 @@ public class Winmenu : MonoBehaviour
         SceneManager.LoadScene("Level2");
 
     }
+    public void Reset()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Level1");
+    }
 }
